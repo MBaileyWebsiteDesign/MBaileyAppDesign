@@ -1,0 +1,97 @@
+<!--{"path":"/web-apps-explained","title":"Web apps explained","nav":"explained","ogTitle":"Website, web app, PWA or native app? An honest comparison","description":"The difference between a website, a browser-based web application, a Progressive Web App and a native mobile app, including what each can and can't do on iPhone, Android, Windows and Mac."}-->
+    <header class="page-head">
+      <div class="wrap">
+        <h1>Website, web app, PWA or native app?</h1>
+        <p class="lede">A plain-English guide to the four options, what each one is good at, and where the limits are. It’s worth reading before you commission any kind of app.</p>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="wrap split">
+        <div class="prose">
+          <h2 id="website">1. A normal website</h2>
+          <p>A website is mainly there to be read. It tells people who you are, what you offer and how to get in touch. It might have a contact form or a blog, but visitors don’t usually log in and work inside it.</p>
+          <p>If that’s what you need, my sister studio <a href="https://mbaileywebsitedesign.co.uk" rel="noopener">M Bailey Website Design</a> is the right place to start.</p>
+
+          <h2 id="web-app">2. A browser-based web application</h2>
+          <p>A web app is software that runs in a web browser. People open it with a web address, usually sign in, and use it to <em>do</em> something: book a slot, update a record, track a job, pay a subscription or run a report.</p>
+          <p>The code runs on a server and in the browser, so one app can serve:</p>
+          <ul>
+            <li>Android phones and tablets</li>
+            <li>iPhone and iPad</li>
+            <li>Windows computers</li>
+            <li>Mac computers</li>
+          </ul>
+          <p>I design the layout to adapt to each screen size, so it works properly on a phone in one hand and on a large desktop monitor. You don’t need separate Android, iOS, Windows and Mac versions for ordinary browser-based features, and nobody has to download anything from an app store.</p>
+          <p>When I release an update, it goes live on the server and everyone gets it the next time they open the app.</p>
+
+          <h2 id="pwa">3. A Progressive Web App (PWA)</h2>
+          <p>A PWA is a web app with some extra parts that let supported browsers treat it more like an installed app. Depending on the device and browser, that can mean:</p>
+          <ul>
+            <li>An icon on the home screen or desktop, opening in its own window without the browser’s address bar.</li>
+            <li>Some screens or data that stay available with a poor or missing connection, <strong>if that’s designed and built in</strong>.</li>
+            <li>Notifications, <strong>if the app is built for them and the user gives permission</strong>.</li>
+          </ul>
+          <p>Things to know:</p>
+          <ul>
+            <li><strong>Installing works differently on each platform.</strong> Chrome and Edge on Android and desktop can show an install option. On iPhone and iPad, people add the app from Safari’s Share menu instead.</li>
+            <li><strong>Offline use isn’t automatic.</strong> Each part of the app that should work offline has to be planned, built and tested. For many apps, especially ones that share live data between users, a connection is still needed for most tasks.</li>
+            <li><strong>Notifications vary.</strong> On iPhone and iPad, web notifications are only available once the app has been added to the Home Screen, and support depends on the iOS version.</li>
+          </ul>
+          <p>Not every project needs to be a PWA. I’ll recommend it when installation or offline access gives your users a real benefit.</p>
+
+          <h2 id="native">4. A native mobile app</h2>
+          <p>A native app is built specifically for one platform, such as iOS or Android, and is usually installed from the App Store or Google Play. Covering several platforms means separate builds, or a cross-platform framework that still produces separate apps, plus each store’s review process for every release.</p>
+          <p>Native is often the better choice when an app needs:</p>
+          <ul>
+            <li>Deep or continuous access to hardware, such as Bluetooth devices, NFC, health sensors or background location tracking.</li>
+            <li>Demanding graphics or performance, such as 3D games or heavy video processing.</li>
+            <li>Reliable background tasks or notifications on every device, whether or not the app has been installed from the home screen.</li>
+            <li>An App Store or Google Play listing as part of how people find you.</li>
+          </ul>
+          <p>Browser support for hardware features differs between platforms. The camera, microphone and location are widely available with permission, but features like Web Bluetooth and Web NFC aren’t supported in Safari on iPhone and iPad. If your app depends on them, I’ll tell you before we go any further.</p>
+        </div>
+
+        <aside aria-labelledby="short-title">
+          <h2 id="short-title">The short version</h2>
+          <p>If people need to <strong>log in and get something done</strong> on whatever device they have, a web app is usually the most direct route.</p>
+          <p>If it helps to have it <strong>on the home screen</strong> or partly <strong>available offline</strong>, make it a PWA.</p>
+          <p>If it depends on <strong>specialist hardware</strong> or an <strong>app-store listing</strong>, consider native.</p>
+          <a class="btn btn-primary" href="/contact">Ask which suits your idea</a>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="compare-title">
+      <div class="wrap">
+        <h2 id="compare-title">Side-by-side comparison</h2>
+        <p class="muted">A general guide. What’s possible in any particular project depends on what’s built and which devices and browsers people use.</p>
+        <div class="table-wrap" tabindex="0" role="region" aria-labelledby="compare-title">
+          <table class="compare">
+            <caption>“Possible” means it can be built in, not that every app includes it.</caption>
+            <thead>
+              <tr>
+                <td></td>
+                <th scope="col">Website</th>
+                <th scope="col" class="hl">Web app</th>
+                <th scope="col" class="pwa">Progressive Web App</th>
+                <th scope="col">Native app</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Main purpose</th><td>Information and enquiries</td><td class="part">Tasks, accounts, data</td><td class="part">Tasks, accounts, data</td><td>Tasks, accounts, data, device features</td></tr>
+              <tr><th scope="row">How people get it</th><td>Web address</td><td><span class="yes">Web address</span></td><td><span class="yes">Web address</span>, optionally installed</td><td>App store download</td></tr>
+              <tr><th scope="row">One build for phone, tablet and computer</th><td>Yes</td><td><span class="yes">Yes</span>, through a modern browser</td><td><span class="yes">Yes</span>, through a modern browser</td><td>Separate builds per platform</td></tr>
+              <tr><th scope="row">User accounts and a database</th><td>Sometimes</td><td><span class="yes">Yes</span></td><td><span class="yes">Yes</span></td><td>Yes</td></tr>
+              <tr><th scope="row">Releasing updates</th><td>Instant</td><td><span class="yes">Instant</span>, on the server</td><td><span class="yes">On the server</span>, picked up on next open</td><td>New store release, then users update</td></tr>
+              <tr><th scope="row">Home screen icon</th><td>Bookmark only</td><td>Bookmark only</td><td><span class="yes">On supported devices and browsers</span></td><td>Yes</td></tr>
+              <tr><th scope="row">Works offline</th><td>No</td><td>No</td><td class="part">Possible for parts that are built for it</td><td>Possible</td></tr>
+              <tr><th scope="row">Push notifications</th><td>No</td><td>Needs PWA features</td><td class="part">Possible, with permission. iPhone and iPad require it to be on the Home Screen.</td><td>Yes, with permission</td></tr>
+              <tr><th scope="row">Camera, microphone, location</th><td>Rarely needed</td><td class="part">Yes, with permission</td><td class="part">Yes, with permission</td><td>Yes</td></tr>
+              <tr><th scope="row">Bluetooth, NFC, background tasks</th><td>No</td><td>Limited, varies by browser, not on iPhone</td><td>Limited, varies by browser, not on iPhone</td><td>Yes</td></tr>
+              <tr><th scope="row">App store listing</th><td>No</td><td>No</td><td>Not by default</td><td>Yes</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>

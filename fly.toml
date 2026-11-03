@@ -1,0 +1,31 @@
+# Fly.io config for M Bailey App Design
+# If the name "mbaileyappdesign" is taken on Fly, change it here (and in the README commands).
+app = "mbaileyappdesign"
+primary_region = "lhr"
+
+[build]
+
+[env]
+  NODE_ENV = "production"
+  PORT = "8080"
+  CANONICAL_HOST = "mbaileyappdesign.co.uk"
+  MAIL_TO = "matt@mbaileyappdesign.co.uk"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = "stop"
+  auto_start_machines = true
+  min_machines_running = 1
+
+  [[http_service.checks]]
+    grace_period = "10s"
+    interval = "30s"
+    method = "GET"
+    path = "/healthz"
+    timeout = "5s"
+
+[[vm]]
+  memory = "256mb"
+  cpu_kind = "shared"
+  cpus = 1

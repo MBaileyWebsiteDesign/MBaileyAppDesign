@@ -1,0 +1,23 @@
+{
+  "name": "mbaileyappdesign",
+  "version": "1.0.0",
+  "description": "M Bailey App Design website - Apps that work everywhere. Built for the web.",
+  "scripts": {
+    "build": "node build.mjs",
+    "start": "node server.mjs",
+    "dev": "node build.mjs && node server.mjs",
+    "images": "node scripts/make-images.mjs"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "nodemailer": "^10.3.1"
+  },
+  "private": true,
+  "devDependencies": {
+    "@fontsource-variable/bricolage-grotesque": "^5.3.0",
+    "@fontsource-variable/instrument-sans": "^5.3.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
