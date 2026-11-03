@@ -71,7 +71,7 @@ open https://mbaileyappdesign.fly.dev
 Every push to `main` deploys via `.github/workflows/fly-deploy.yml`. One-off setup:
 
 ```bash
-fly tokens create deploy -x 999999h   # copy the token it prints
+fly tokens create org -x 999999h      # copy the token it prints (org token so the workflow can create the app on first run)
 gh secret set FLY_API_TOKEN --repo MBaileyWebsiteDesign/MBaileyAppDesign
 ```
 
