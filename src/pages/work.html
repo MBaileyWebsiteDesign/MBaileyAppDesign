@@ -1,0 +1,153 @@
+<!--{"path":"/work","title":"Work","nav":"work","ogTitle":"Web apps and PWAs built by M Bailey App Design","description":"Projects built by Matt Bailey: the Cue Sense pool league platform, a 3D pool training simulator, AI technique coaching, installable family games and a learning platform for young creators."}-->
+    <header class="page-head">
+      <div class="wrap">
+        <h1>Work</h1>
+        <p class="lede">Apps I’ve designed and built, from a full league management platform to installable family games. They all run in the browser, and several can be installed as Progressive Web Apps.</p>
+      </div>
+    </header>
+
+    <section class="section" aria-labelledby="cue-title">
+      <div class="wrap">
+        <div class="case case-feature">
+          <div class="case-media">
+            <img src="/img/work/league.webp" width="1280" height="800" alt="Cue Sense league management sign-in screen, with the Cue Sense badge and green and gold branding" loading="lazy">
+          </div>
+          <div class="case-body">
+            <p class="case-type">Sports platform</p>
+            <h2 id="cue-title">Cue Sense</h2>
+            <p class="lede muted">A growing platform for pool players, leagues and venues. It started with league management and now includes training and coaching tools, all under one brand.</p>
+          </div>
+        </div>
+
+        <div class="case-parts">
+          <article class="case-part" aria-labelledby="cs-league">
+            <h3 id="cs-league">League management</h3>
+            <p class="case-status">In use</p>
+            <p>Website builders don’t include proper competition management, so leagues were running on spreadsheets. This app gives organisers, captains and players one place for the whole season.</p>
+            <ul>
+              <li>One sign-in for admins, captains and players, with permissions for each role</li>
+              <li>Singles, team and doubles divisions</li>
+              <li>Round-robin leagues and single or double-elimination knockouts</li>
+              <li>A five-step wizard to set up a whole new season, including importing players from a spreadsheet</li>
+              <li>Frame-by-frame results, live standings, player profiles and a trophy cabinet</li>
+              <li>Public links for brackets, tables and fixtures, and an overlay for live streams</li>
+              <li>Tools for venue managers and bar staff, check-in, membership and an audit log</li>
+            </ul>
+            <ul class="chips" aria-label="Built with"><li>React</li><li>Node.js</li><li>Express</li><li>Fly.io</li></ul>
+          </article>
+
+          <article class="case-part" aria-labelledby="cs-training">
+            <h3 id="cs-training">Virtual Training</h3>
+            <p class="case-status">Early build</p>
+            <p>A 3D English pool simulator that runs in the browser, built with training at its core.</p>
+            <ul>
+              <li>A 3D table with realistic ball physics, including spin, throw and cushion rebounds</li>
+              <li>Eight scored training exercises with feedback and medals</li>
+              <li>Daily challenges, a ladder and timed rounds</li>
+              <li>Two-player matches under WPA Blackball rules, including on two phones</li>
+              <li>Aim by touch, mouse or keyboard, with optional shot guides</li>
+            </ul>
+            <ul class="chips" aria-label="Built with"><li>React</li><li>Three.js</li><li>TypeScript</li><li>Fly.io</li></ul>
+            <img class="case-inline" src="/img/work/training.webp" width="1280" height="800" alt="Cue Sense Virtual Training start screen with menu options for training, free practice, matches and challenges" loading="lazy">
+          </article>
+
+          <article class="case-part" aria-labelledby="cs-ai">
+            <h3 id="cs-ai">AI technique coaching</h3>
+            <p class="case-status">Proof of concept</p>
+            <p>Upload a short clip of yourself playing and get coaching feedback back on the same page.</p>
+            <ul>
+              <li>Accepts video clips of up to a minute and checks them before processing</li>
+              <li>Samples frames from the clip and analyses them with an AI vision model</li>
+              <li>Feedback on stance, bridge hand, grip, cue alignment and follow-through</li>
+              <li>Each point comes with a suggestion and a confidence level</li>
+              <li>If the AI doesn’t give a usable answer, it says so instead of making one up</li>
+            </ul>
+            <ul class="chips" aria-label="Built with"><li>Python</li><li>FastAPI</li><li>FFmpeg</li><li>Claude AI</li><li>Fly.io</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tone-navy" aria-labelledby="dragons-title">
+      <div class="wrap case">
+        <div class="case-media case-media-pair">
+          <img src="/img/work/dragons.webp" width="1280" height="800" alt="Dragons and Tomatoes start screen with six cartoon dragons under a wooden sign" loading="lazy">
+          <img class="phone-shot" src="/img/work/dragons-phone.webp" width="390" height="844" alt="The same game on a phone screen" loading="lazy">
+        </div>
+        <div class="case-body">
+          <p class="case-type">Family game, installable</p>
+          <h2 id="dragons-title">Dragons and Tomatoes</h2>
+          <p>A fantasy take on Snakes and Ladders for two or three players. Play on one shared device, or each player on their own phone with a four-letter game code.</p>
+          <ul>
+            <li>Installable on phones and tablets. One-device games work offline</li>
+            <li>Multi-device games where the server rolls the dice and checks every turn</li>
+            <li>A host can roll for a player whose device drops out</li>
+            <li>Winners earn colours for their dragon. Collect seven to become a Rainbow Dragon</li>
+            <li>Board balance tested by simulating 20,000 games</li>
+          </ul>
+          <ul class="chips" aria-label="Built with"><li>React</li><li>TypeScript</li><li>Node.js</li><li>PWA</li><li>Fly.io</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="lily-title">
+      <div class="wrap case case-flip">
+        <div class="case-media case-media-pair">
+          <img src="/img/work/lilys.webp" width="1280" height="800" alt="Lily's Gymnastics menu with a gymnast on a balance beam in a busy arena" loading="lazy">
+          <img class="phone-shot" src="/img/work/lilys-phone.webp" width="390" height="844" alt="The same game on a phone screen" loading="lazy">
+        </div>
+        <div class="case-body">
+          <p class="case-type">Family game, installable</p>
+          <h2 id="lily-title">Lily’s Gymnastics</h2>
+          <p>A colourful gymnastics game for phones, tablets and computers. Build a routine, perform it, and get scored by a panel of judges.</p>
+          <ul>
+            <li>Routine builder, training mode and competitions</li>
+            <li>Unlockable moves, gymnasts, apparatus and arenas</li>
+            <li>Five-star mastery for each skill, plus daily challenges and achievements</li>
+            <li>Add to the home screen. Progress saves in the player’s browser</li>
+            <li>The whole game is one lightweight page, so it loads fast</li>
+          </ul>
+          <ul class="chips" aria-label="Built with"><li>HTML</li><li>JavaScript</li><li>PWA</li><li>Fly.io</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tone-tint" aria-labelledby="pt-title">
+      <div class="wrap case">
+        <div class="case-media">
+          <img src="/img/work/playtinker.webp" width="1280" height="800" alt="PlayTinker home page: Imagine it. Tinker with it. Play it." loading="lazy">
+        </div>
+        <div class="case-body">
+          <p class="case-type">Learning platform concept</p>
+          <h2 id="pt-title">PlayTinker</h2>
+          <p>A concept for a free place where young people play browser games, create their own with AI as a helper, and learn real software skills. The child is the creator and AI is the tool.</p>
+          <ul>
+            <li>Playable games, each with Inspect to see the real code and Remix to change settings live</li>
+            <li>A working Prompt Builder and Creator’s Check that explain good prompting</li>
+            <li>A seven-level academy with progress points</li>
+            <li>Guidance pages for parents and educators, plus privacy and safety commitments</li>
+            <li>Separate test and live sites, with automatic deployment</li>
+          </ul>
+          <ul class="chips" aria-label="Built with"><li>Node.js</li><li>Express</li><li>Automated tests</li><li>Fly.io</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="nvq-title">
+      <div class="wrap case case-text">
+        <div class="case-body">
+          <p class="case-type">Business website with automation</p>
+          <h2 id="nvq-title">NVQ Pro</h2>
+          <p>A training provider’s website with the business processes built in, not just pages. It’s built on Wix Headless, so it uses Wix’s CMS and store with a custom front end.</p>
+        </div>
+        <div class="case-body">
+          <ul>
+            <li>Records of learners who have bought or submitted an NVQ, and of people registering interest</li>
+            <li>Public forms that write securely into the records, which only admins can read</li>
+            <li>Automatic reminder emails a month before a learner’s qualification expires</li>
+            <li>Online store and invoicing</li>
+          </ul>
+          <ul class="chips" aria-label="Built with"><li>Next.js</li><li>Wix Headless</li><li>Wix Stores</li><li>Scheduled jobs</li></ul>
+        </div>
+      </div>
+    </section>

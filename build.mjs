@@ -11,9 +11,9 @@ const VERSION = Date.now().toString(36);
 const nav = [
   ['/web-apps-explained', 'Web apps explained', 'explained'],
   ['/services', 'Services', 'services'],
+  ['/work', 'Work', 'work'],
   ['/who-its-for', 'Who it’s for', 'who'],
   ['/process', 'How it works', 'process'],
-  ['/guides', 'Guides', 'guides'],
   ['/about', 'About', 'about'],
 ];
 
@@ -133,12 +133,14 @@ ${body}
             <li><a href="/web-apps-explained#native">When native is better</a></li>
             <li><a href="/web-app-cost">What a web app costs</a></li>
             <li><a href="/plan-your-app">Plan your app</a></li>
+            <li><a href="/guides">All guides</a></li>
           </ul>
         </div>
         <div>
           <h2>Studio</h2>
           <ul>
             <li><a href="/services">Services</a></li>
+            <li><a href="/work">Work</a></li>
             <li><a href="/who-its-for">Who it’s for</a></li>
             <li><a href="/process">How it works</a></li>
             <li><a href="/security">Security and data</a></li>

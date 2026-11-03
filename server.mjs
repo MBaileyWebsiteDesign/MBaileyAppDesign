@@ -14,7 +14,7 @@ const MAIL_FROM = process.env.MAIL_FROM || 'M Bailey App Design <website@mbailey
 const TYPES = {
   '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8',
   '.json': 'application/json', '.webmanifest': 'application/manifest+json', '.svg': 'image/svg+xml',
-  '.png': 'image/png', '.ico': 'image/x-icon', '.woff2': 'font/woff2', '.xml': 'application/xml; charset=utf-8',
+  '.png': 'image/png', '.webp': 'image/webp', '.ico': 'image/x-icon', '.woff2': 'font/woff2', '.xml': 'application/xml; charset=utf-8',
   '.txt': 'text/plain; charset=utf-8',
 };
 const COMPRESSIBLE = new Set(['.html', '.css', '.js', '.json', '.webmanifest', '.svg', '.xml', '.txt']);
@@ -165,7 +165,7 @@ const server = http.createServer(async (req, res) => {
     for (const c of candidates) {
       try {
         const entry = await loadFile(join(ROOT, c));
-        const isAsset = /\.(css|js|woff2|png|svg|ico)$/.test(c) && c !== '/sw.js';
+        const isAsset = /\.(css|js|woff2|png|webp|svg|ico)$/.test(c) && c !== '/sw.js';
         const cache = c === '/sw.js' ? 'no-cache'
           : isAsset ? (url.searchParams.has('v') || c.startsWith('/fonts/') ? 'public, max-age=31536000, immutable' : 'public, max-age=86400')
           : 'public, max-age=300';
