@@ -1,0 +1,99 @@
+<!--{"path":"/plan-your-app","title":"Plan your app","nav":"plan","scripts":["/js/planner.js"],"noCta":true,"ogTitle":"Plan your app: web app, PWA or native?","description":"Answer a few questions about your app idea and get an instant recommendation: a web app, a Progressive Web App or a native app, plus what will shape the scope. No sign-up needed."}-->
+    <header class="page-head">
+      <div class="wrap">
+        <h1>Plan your app</h1>
+        <p class="lede">Answer a few questions and get an instant recommendation: a web app, a Progressive Web App, or a native app. You’ll also see which parts of your idea will shape the scope. Nothing is sent until you choose to send it.</p>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="wrap planner">
+        <form id="planner" class="planner-form" novalidate>
+          <fieldset>
+            <legend><span class="q-num">1</span> Who will use the app?</legend>
+            <div class="choices">
+              <label><input type="checkbox" name="users" value="staff"> Your staff or team</label>
+              <label><input type="checkbox" name="users" value="customers"> Customers or the public</label>
+              <label><input type="checkbox" name="users" value="members"> Members, players or volunteers</label>
+              <label><input type="checkbox" name="users" value="admins"> Admins who manage everything</label>
+              <label><input type="checkbox" name="users" value="me"> Just me</label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend><span class="q-num">2</span> Which devices will they use?</legend>
+            <div class="choices">
+              <label><input type="checkbox" name="devices" value="phone"> Phones</label>
+              <label><input type="checkbox" name="devices" value="tablet"> Tablets</label>
+              <label><input type="checkbox" name="devices" value="computer"> Laptops and desktops</label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend><span class="q-num">3</span> What should it do?</legend>
+            <div class="choices">
+              <label><input type="checkbox" name="features" value="accounts"> User accounts and logins</label>
+              <label><input type="checkbox" name="features" value="bookings"> Bookings or scheduling</label>
+              <label><input type="checkbox" name="features" value="payments"> Payments or subscriptions</label>
+              <label><input type="checkbox" name="features" value="records"> Forms, records and lists</label>
+              <label><input type="checkbox" name="features" value="reports"> Dashboards and reports</label>
+              <label><input type="checkbox" name="features" value="files"> Sharing files or documents</label>
+              <label><input type="checkbox" name="features" value="email"> Email reminders and alerts</label>
+              <label><input type="checkbox" name="features" value="integrations"> Connect to other software</label>
+              <label><input type="checkbox" name="features" value="import"> Bring in existing data</label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend><span class="q-num">4</span> Does it need any of these?</legend>
+            <div class="choices">
+              <label><input type="checkbox" name="extras" value="install"> An icon on the home screen</label>
+              <label><input type="checkbox" name="extras" value="offline"> To work with poor or no signal</label>
+              <label><input type="checkbox" name="extras" value="push"> Push notifications</label>
+              <label><input type="checkbox" name="extras" value="camera"> Camera, photos or location</label>
+              <label><input type="checkbox" name="extras" value="hardware"> Bluetooth, NFC or other hardware</label>
+              <label><input type="checkbox" name="extras" value="background"> Tracking location in the background</label>
+              <label><input type="checkbox" name="extras" value="store"> A listing in the App Store or Google Play</label>
+              <label><input type="checkbox" name="extras" value="graphics"> Demanding 3D graphics or games</label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend><span class="q-num">5</span> Roughly how many people will use it?</legend>
+            <div class="choices radios">
+              <label><input type="radio" name="scale" value="few"> A handful</label>
+              <label><input type="radio" name="scale" value="dozens"> Dozens</label>
+              <label><input type="radio" name="scale" value="hundreds"> Hundreds</label>
+              <label><input type="radio" name="scale" value="thousands"> Thousands or more</label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend><span class="q-num">6</span> When do you need it?</legend>
+            <div class="choices radios">
+              <label><input type="radio" name="timing" value="exploring"> Just exploring</label>
+              <label><input type="radio" name="timing" value="months"> In the next few months</label>
+              <label><input type="radio" name="timing" value="date"> By a fixed date</label>
+            </div>
+          </fieldset>
+        </form>
+
+        <aside class="plan-result" aria-labelledby="result-title">
+          <div aria-live="polite">
+            <p class="plan-kicker" id="result-kicker">Your recommendation</p>
+            <h2 id="result-title">Tick a few answers to see a recommendation</h2>
+            <p id="result-text" class="muted">It updates as you go.</p>
+            <div id="result-scope" hidden>
+              <h3>What will shape the scope</h3>
+              <p class="muted" id="result-size"></p>
+              <ul id="result-drivers"></ul>
+            </div>
+          </div>
+          <div class="plan-actions">
+            <button type="button" class="btn btn-primary" id="send-plan" disabled>Send this plan to Matt</button>
+            <button type="button" class="btn btn-ghost" id="reset-plan">Start again</button>
+          </div>
+          <p class="plan-note">This is a starting point, not a quote. Every project is scoped and quoted individually.</p>
+        </aside>
+      </div>
+    </section>

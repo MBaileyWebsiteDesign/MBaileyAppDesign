@@ -11,9 +11,10 @@ const VERSION = Date.now().toString(36);
 const nav = [
   ['/web-apps-explained', 'Web apps explained', 'explained'],
   ['/services', 'Services', 'services'],
+  ['/who-its-for', 'Who it’s for', 'who'],
   ['/process', 'How it works', 'process'],
+  ['/guides', 'Guides', 'guides'],
   ['/about', 'About', 'about'],
-  ['/faq', 'FAQ', 'faq'],
 ];
 
 const orgLd = {
@@ -108,6 +109,7 @@ function layout(meta, body) {
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
       <nav id="site-nav" class="nav" aria-label="Main">
         ${navHtml}
+        <a class="btn btn-ghost nav-plan" href="/plan-your-app"${meta.nav === 'plan' ? ' aria-current="page"' : ''}>Plan your app</a>
         <a class="btn btn-primary" href="/contact"${meta.nav === 'contact' ? ' aria-current="page"' : ''}>Start a project</a>
       </nav>
     </div>
@@ -129,13 +131,17 @@ ${body}
             <li><a href="/web-apps-explained">Web apps explained</a></li>
             <li><a href="/web-apps-explained#pwa">Progressive Web Apps</a></li>
             <li><a href="/web-apps-explained#native">When native is better</a></li>
-            <li><a href="/services">Services</a></li>
+            <li><a href="/web-app-cost">What a web app costs</a></li>
+            <li><a href="/plan-your-app">Plan your app</a></li>
           </ul>
         </div>
         <div>
           <h2>Studio</h2>
           <ul>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/who-its-for">Who it’s for</a></li>
             <li><a href="/process">How it works</a></li>
+            <li><a href="/security">Security and data</a></li>
             <li><a href="/about">About</a></li>
             <li><a href="/faq">FAQ</a></li>
             <li><a href="/contact">Contact</a></li>
@@ -151,11 +157,11 @@ ${body}
       </div>
       <div class="footer-base">
         <span>&copy; ${new Date().getFullYear()} ${NAME}</span>
-        <a href="/privacy" style="color:inherit">Privacy notice</a>
+        <span><a href="/privacy" style="color:inherit">Privacy notice</a> &nbsp; <a href="/accessibility" style="color:inherit">Accessibility</a></span>
       </div>
     </div>
   </footer>
-  <script src="/js/site.js?v=${VERSION}" defer></script>
+  <script src="/js/site.js?v=${VERSION}" defer></script>${(meta.scripts || []).map((src) => `\n  <script src="${src}?v=${VERSION}" defer></script>`).join('')}
 </body>
 </html>
 `;

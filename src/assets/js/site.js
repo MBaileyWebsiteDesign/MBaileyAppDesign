@@ -70,6 +70,16 @@
       form.querySelectorAll('.err').forEach((e) => (e.textContent = ''));
     };
 
+    // Prefill from the "Plan your app" tool
+    try {
+      const plan = sessionStorage.getItem('mbad-plan');
+      if (plan && new URLSearchParams(location.search).get('from') === 'planner' && !form.message.value) {
+        form.message.value = plan;
+        const note = document.getElementById('plan-note');
+        if (note) note.hidden = false;
+      }
+    } catch { /* storage unavailable */ }
+
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       clearErrors();
@@ -92,6 +102,7 @@
         const json = await res.json().catch(() => ({}));
         if (res.ok && json.ok) {
           form.reset();
+          try { sessionStorage.removeItem('mbad-plan'); } catch { /* ignore */ }
           show('ok', '<strong>Message sent.</strong> Thanks for getting in touch. I’ll reply by email.');
         } else {
           show('bad', `<strong>Your message wasn’t sent.</strong> ${json.error || 'Something went wrong on the server.'} You can email <a href="mailto:matt@mbaileyappdesign.co.uk">matt@mbaileyappdesign.co.uk</a> instead.`);
